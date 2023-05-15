@@ -378,6 +378,22 @@ body {
     stroke-width: 5px;
 }
 
+.returntotopbutton {
+    width: 150px;
+    height: 40px;
+    font-size: 19px;
+    border-radius: 10px;
+    background-color: #D1E5FB;
+    color: black;
+    cursor: pointer;
+    border-color: #8F93D9;
+    margin-right: 10px;
+}
+
+.returntotopbutton:hover {
+    background-color: #8F93D9;
+}
+
 @media only screen and (max-width: 600px) {
     .herogrid {
         display: flex;

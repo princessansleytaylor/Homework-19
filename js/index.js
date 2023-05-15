@@ -77,7 +77,8 @@ Vue.component('Navigation', {
         <a
             v-for="({url, label}, index) in links" 
             :href="url" class="nav-item" :class="{'is-active': active === index}"
-            @click.prevent="active = index">
+            @click.prevent="active = index"
+            :id="label">
             <SvgBorder></SvgBorder>
             <SvgBorder></SvgBorder>
             {{label}}
@@ -99,13 +100,18 @@ window.onload = function() {
             }
         },
     });
-    const footer = new Vue({
-        el: '#footer',
-        data() {
-            return {
-                navLinks: ['Portfolio', 'About', 'Contact', 'Resume']
-                    .map(label => ({ url: '#', label })),
-            }
-        },
-    });
 }
+
+$(document).ready(function() {
+    $('#topBtn').click(function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    $('#Portfolio').click(function() {
+        window.location.href = "index.html";
+    });
+
+    $('#About').click(function() {
+        window.location.href = "aboutMe.html";
+    });
+});

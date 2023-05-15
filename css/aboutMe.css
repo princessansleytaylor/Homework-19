@@ -14,6 +14,75 @@ body {
     height: 105px;
 }
 
+.introtext {
+    color: #3D9BE9;
+}
+
+.effects {
+    display: none;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.linkthing {
+    --link-color: #08F;
+    --link-hover-color: #3AE;
+    align-items: center;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    flex: 0 0 50%;
+}
+
+.svg-border {
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    stroke-dashoffset: 101;
+    stroke-dasharray: 101 101;
+    stroke-width: 4px;
+    top: 0;
+    transition: all .5s, stroke .3s;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-item {
+    color: var(--link-color);
+    font-weight: bold;
+    margin: 0 1rem;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .3s;
+}
+
+.nav-item:hover,
+.nav-item.is-active {
+    color: var(--link-hover-color);
+}
+
+.nav-item:hover .svg-border,
+.nav-item.is-active .svg-border {
+    stroke-dashoffset: 202;
+}
+
+.linkthing.as-LT1 .nav-item>.svg-border:first-child {
+    filter: blur(4px);
+    stroke-width: 5px;
+}
+
 .inline-block {
     display: inline-block;
 }
@@ -296,6 +365,22 @@ body {
     margin-block-start: 0;
     margin-block-end: 0;
     padding: 0;
+}
+
+.returntotopbutton {
+    width: 150px;
+    height: 40px;
+    font-size: 19px;
+    border-radius: 10px;
+    background-color: #D1E5FB;
+    color: black;
+    cursor: pointer;
+    border-color: #8F93D9;
+    margin-right: 10px;
+}
+
+.returntotopbutton:hover {
+    background-color: #8F93D9;
 }
 
 @media only screen and (max-width: 600px) {
