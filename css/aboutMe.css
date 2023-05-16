@@ -408,6 +408,8 @@ body {
         height: fit-content;
         flex-direction: column;
         justify-content: center;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: "contactleft" "contactright";
     }
     .contactleft {
         height: fit-content;
