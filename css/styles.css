@@ -139,7 +139,7 @@ body {
 .caseStudyGrid {
     display: grid;
     row-gap: 20px;
-    column-gap: 10px;
+    column-gap: 15px;
     justify-items: center;
     grid-template-rows: 50% 50%;
     grid-template-areas: "drawchange greecycle" "FCCRedesign planIt";
